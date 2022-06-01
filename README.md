@@ -6,7 +6,7 @@ Welcome to the wiki of the workstation of Micro4food!
 # Accessing the workstation
 
 ## VSCode
-You need a program on your PC where you can access the terminal via a command line. There are many different programs for this, but I use Visual Studio Code. With this program you can also copy files from the workstation to your own computer and read and write files and scripts at the same time. 
+You need a program on your PC where you can access the **terminal via a command line**. There are many different programs for this, but I use Visual Studio Code. With this program you can also copy files from the workstation to your own computer and read and write files and scripts at the same time. 
  
 ### Download VScode
 https://code.visualstudio.com/
