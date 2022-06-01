@@ -1,6 +1,6 @@
 # wiki-workstation
 
-Welcome to the wiki of the workstation of Micro4food!
+Welcome to the wiki of the Micro4food workstation!
 
 
 # Accessing the workstation
