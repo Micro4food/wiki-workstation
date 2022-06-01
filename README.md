@@ -118,9 +118,26 @@ To find a list of environments/software installed on the workstation:
 $ conda list
 ```
 
+When using conda in a .sh script, you need to add `eval "$(conda shell.bash hook)"` before activating any conda environment
+
+```
+$ #!/bin/bash
+
+$ eval "$(conda shell.bash hook)"
+$ conda activate bowtie2
+$ bowtie2 -options file
+$ conda deactivate
+$
+$ conda activate fastqc
+$ fastqc -options file
+$ conda deactivate
+```
+
 # Use of computing resources
 CPU/threads and RAM memory <br />
 To speed up your jobs, bioinformatic software usually have options that specify how much resources to use. There is usually a default value, but software can run many times faster with a higher CPU usage. Check in the options of the software, it is often specified with `-t` or `--thread` but can be something different. 
+
+For now there is no way to distribute the resources on the workstation, so please be fair when calling for many threads. If you use all 64, no one else can do any jobs. A parallell job system will be installed shortly.  
 
 
 # Tips and tricks
