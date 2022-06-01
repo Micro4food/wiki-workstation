@@ -12,15 +12,16 @@ You need a program on your PC where you can access the terminal via a command li
 https://code.visualstudio.com/
 ### Install git bash 
 you need the program to be able to read shell bash files, which is the programming language for linux. <br />
-https://git-scm.com/downloads<br />
-Select bash as the default language for the terminal<br />
-https://www.shanebart.com/set-default-vscode-terminal/
+Here is a tutorial to select bash as your default language: <br />
+**https://git-scm.com/downloads**<br />
+
 
 ### Install the extension ssh FS 
 https://marketplace.visualstudio.com/items?itemName=Kelvin.vscode-sshfs <br />
 This extension  makes it possible to acces the workstation in a folder format similar to a windows setup. It connects to the workstation via a ssh connection
 
 Configure the connection to the workstation in ssh FS<br />
+
 Fill in these fields:<br />
 "Name": what you want the connection to be called. Can be anything eg. #Workstation” or your username<br />
 “Host”: type in the IP address of the workstation: **10.11.200.20** <br />
@@ -28,6 +29,7 @@ Fill in these fields:<br />
 “username”. your username <br />
 “password” – choose prompt. You will have to type it in every time you want to log in. It is not recommended to put the password in this configuration, as it is not very safe. <br />
 
+![ssh FS](https://github.com/SchoofsKelvin/vscode-sshfs/raw/HEAD/media/config-editor.png)
 
 4.	Log in<br />
 If you are not working connected to Scientific Network SouthTyrol, you need to access it first through the University VPN<br />
@@ -39,23 +41,24 @@ Log in using an ssh connection directly via the terminal:
 $ ssh -X $USER@10.11.200.20
 ```
 ### Log in via ssh fs to access folder 
-Add as workspace folder<br />
+In SSH FS, right click on the configured connection (upper left corner) and select **Add as workspace folder**<br />
 At prompt, put in password<br />	
-Right click on the Workspace folder and click on “open remote SSH terminal”. Will not require a password prompt, since you already typed it in when you logged in to workspace folder<br />	
+In the explorer, right click on the Workspace folder and click on **“open remote SSH terminal”**. It will not require a password prompt, since you already typed it in when you logged in to workspace folder. It should have started a terminal directly in `/data01/$USER` <br />	
 
 First time you log in – change the password!<br />
 ```
 $ passwd
 ```
+![change password](https://cdn.mos.cms.futurecdn.net/LU7wmpZXnggLT85ZLYK5Gh-970-80.png)
 
 ## File transfer
-You can transfer files to/from the workstation through VScode, but a quicker and more controlled way is through a file sharing program like Filezilla or WinSCP. Access the workstation with the same configurations as for VScode. 
+You can transfer files to/from the workstation through VScode, but a quicker and more controlled way is through a file sharing program like **Filezilla** or **WinSCP**. Access the workstation with the same configurations as for VScode. 
 
 # The Linux terminal
 To learn how to navigate the linux terminal, please do a tutorial for the basic commands. For example how to move through the directories, copy, move and delete files, list directories and files and so on. <br />
 https://ubuntu.com/tutorials/command-line-for-beginners#1-overview<br />
 
-You need to know how to move in the terminal 
+For example, you need to know how to move in the terminal 
 ```
 $ mv
 $ cd 
@@ -100,14 +103,17 @@ Compress fastq files to fastq.gz (most software can work with this, otherwise us
 
  
 # Running bioinformatic analyses and scripts with conda
-All software is installed by the System Administrator. If you want a new software downloaded, please send Lena an email. <br />
-Software is run through the environment manager program called **Anaconda3**. you therefore have to “activate” a software before you can use it: 
+All software is installed by the System Administrator (Lena). This is to prevent the accidental removal or changing of important software or files. 
+
+If you want a new software downloaded, please send Lena an email.
+
+Software is run through the environment manager program called **Anaconda3**. You therefore have to “activate” an environment where the software is excecutable before you can use it: 
 ```
-$ conda activate bowtie2                        #activate the environment with the software
+$ conda activate bowtie2                        # activate the environment with the software
 $ bowtie2 sample.fastq reference.fa             # run your script
-$ conda deactivate bowtie2                      #deactivate the environment 
+$ conda deactivate bowtie2                      # deactivate the environment 
 ```
-List all environments/software installed on the workstation:
+To find a list of environments/software installed on the workstation:
 ```
 $ conda list
 ```
