@@ -100,7 +100,9 @@ Compress fastq files to fastq.gz (most software can work with this, otherwise us
  ```
  It's the same with bam files, which are binary version of sam files (alignment files). Also, sorted bam files take up much less space while compressed, so use `samtools sort` to sort them
 
+# Raw data
 
+A copy of the raw data (fastq.gz files) should be kept in `/data01/data/` for safekeeping as the files in this folder can't be deleted. Copy them from here or use symbolic links in your directory to access them. 
  
 # Running bioinformatic analyses and scripts with conda
 All software is installed by the System Administrator (Lena). This is to prevent the accidental removal or changing of important software or files. 
