@@ -47,7 +47,11 @@ First time you log in – change the password!<br />
 ```
 $ passwd
 ```
-## The Linux terminal
+
+## File transfer
+You can transfer files to/from the workstation through VScode, but a quicker and more controlled way is through a file sharing program like Filezilla or WinSCP. Access the workstation with the same configurations as for VScode. 
+
+# The Linux terminal
 To learn how to navigate the linux terminal, please do a tutorial for the basic commands. For example how to move through the directories, copy, move and delete files, list directories and files and so on. <br />
 https://ubuntu.com/tutorials/command-line-for-beginners#1-overview<br />
 
@@ -67,7 +71,7 @@ $ mkdir
 ```
 
 
-## User storage
+# User storage
 
 ### /data01/$USER
 every user also has a directory in /data01/$USER <br />
@@ -95,7 +99,7 @@ Compress fastq files to fastq.gz (most software can work with this, otherwise us
 
 
  
-## Running bioinformatic analyses and scripts with conda
+# Running bioinformatic analyses and scripts with conda
 All software is installed by the System Administrator. If you want a new software downloaded, please send Lena an email. <br />
 Software is run through the environment manager program called **Anaconda3**. you therefore have to “activate” a software before you can use it: 
 ```
@@ -108,15 +112,12 @@ List all environments/software installed on the workstation:
 $ conda list
 ```
 
-## File transfer
-You can transfer files to/from the workstation through VScode, but a quicker and more controlled way is through a file sharing program like Filezilla or WinSCP. Access the workstation with the same configurations as for VScode. 
-
-## Use of computing resources
+# Use of computing resources
 CPU/threads and RAM memory <br />
 To speed up your jobs, bioinformatic software usually have options that specify how much resources to use. There is usually a default value, but software can run many times faster with a higher CPU usage. Check in the options of the software, it is often specified with `-t` or `--thread` but can be something different. 
 
 
-## Tips and tricks
+# Tips and tricks
 Use the tab button to auto complete the name of a file or directory in the terminal<br />
 Ctrl+arrow button will jump through separated fields in any text, including the terminal (also in word files)<br />
 For loops are your friend. Instead of running the same analysis on different samples one after another, create a loop that will automatically start one job after the first one is finished
