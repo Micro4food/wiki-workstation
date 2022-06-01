@@ -38,8 +38,7 @@ Log in using an ssh connection directly via the terminal:
 
 ### Log in via terminal
 ```
-$ ssh -X $USER@10.11.200.20      #exchange $USER with your username:
-$ ssh -X granehaell@10.11.200.20
+$ ssh -X granehaell@10.11.200.20       #exchange granehaell with your username:
 ```
 ### Log in via ssh fs to access folder 
 In SSH FS, right click on the configured connection (upper left corner) and select **Add as workspace folder**<br />
