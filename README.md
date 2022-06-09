@@ -2,11 +2,11 @@
 
 Welcome to the wiki of the Micro4food workstation!
 
-
 # Accessing the workstation
 
-## VSCode
-You need a program on your PC where you can access the **terminal via a command line**. There are many different programs for this, but I use Visual Studio Code. With this program you can also copy files from the workstation to your own computer and read and write files and scripts at the same time. 
+You need a program on your PC where you can access a **terminal via a command line**. 
+
+There are many different programs for this, but I use **Visual Studio Code**. With this program you can also copy files from the workstation to your own computer and read and write files and scripts at the same time. 
  
 ### Download VScode
 https://code.visualstudio.com/
@@ -18,22 +18,25 @@ Here is a tutorial to select bash as your default language: <br />
 
 ### Install the extension ssh FS 
 https://marketplace.visualstudio.com/items?itemName=Kelvin.vscode-sshfs <br />
-This extension  makes it possible to acces the workstation in a folder format similar to a windows setup. It connects to the workstation via a ssh connection
+This extension  makes it possible to acces the workstation in a folder format similar to a windows setup. It connects to the workstation via a ssh connection.
 
-Configure the connection to the workstation in ssh FS<br />
 
-Fill in these fields:<br />
+Make a new configure for the connection to the workstation in ssh FS.<br />
+![ssh FS new](http://www.cse.unsw.edu.au/~learn/homecomputing/_images/image2.png)
 "Name": what you want the connection to be called. Can be anything eg. #Workstation” or your username<br />
+Click save
+
+On the next page, fill in these fields:<br />
 “Host”: type in the IP address of the workstation: **10.11.200.20** <br />
-“root” this is which directory you want to connect to. Write `/data01/$USER` <br />
+“root” this is which directory you want to connect to. Write `/data01/$your_username` (eg. /data01/granehaell) <br />
 “username”. your username <br />
 “password” – choose prompt. You will have to type it in every time you want to log in. It is not recommended to put the password in this configuration, as it is not very safe. <br />
+Click save
 
 ![ssh FS](https://github.com/SchoofsKelvin/vscode-sshfs/raw/HEAD/media/config-editor.png)
 
 4.	Log in<br />
 If you are not working connected to Scientific Network SouthTyrol, you need to access it first through the University VPN<br />
-Log in using an ssh connection directly via the terminal: 
 
 
 ### Log in via terminal
@@ -117,7 +120,7 @@ $ conda deactivate bowtie2                      # deactivate the environment
 ```
 To find a list of environments/software installed on the workstation:
 ```
-$ conda list
+$ conda info --envs
 ```
 
 When using conda in a .sh script, you need to add `eval "$(conda shell.bash hook)"` before activating any conda environment
@@ -148,3 +151,5 @@ Ctrl+arrow button will jump through separated fields in any text, including the 
 For loops are your friend. Instead of running the same analysis on different samples one after another, create a loop that will automatically start one job after the first one is finished
 
 For all that is holy, **remember to make comments in your scripts**. You will not remember what a command is for or how to run it after a few months. 
+
+When trying new scripts and software, test them on subsets of your samples first. This will save time and resources.  
