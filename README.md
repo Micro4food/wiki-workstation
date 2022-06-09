@@ -36,17 +36,21 @@ Click save
 ![ssh FS](https://github.com/SchoofsKelvin/vscode-sshfs/raw/HEAD/media/config-editor.png)
 
 4.	Log in<br />
-If you are not working connected to Scientific Network SouthTyrol, you need to access it first through the University VPN<br />
 
+If you are not working connected to Scientific Network SouthTyrol, you need to first access it first through the University VPN<br />
+
+
+### Log in via ssh fs to access folder 
+In SSH FS, right click on the configured connection (upper left corner) and select **Add as workspace folder**<br />
+![add as workspace folder](images/ssh_add_workspace.png)
+
+At prompt, put in password<br />	
+In the explorer, right click on the Workspace folder and click on **“open remote SSH terminal”**. It will not require a password prompt, since you already typed it in when you logged in to workspace folder. It should have started a terminal directly in `/data01/$USER` <br />	
 
 ### Log in via terminal
 ```
 $ ssh -X granehaell@10.11.200.20       #exchange granehaell with your username:
 ```
-### Log in via ssh fs to access folder 
-In SSH FS, right click on the configured connection (upper left corner) and select **Add as workspace folder**<br />
-At prompt, put in password<br />	
-In the explorer, right click on the Workspace folder and click on **“open remote SSH terminal”**. It will not require a password prompt, since you already typed it in when you logged in to workspace folder. It should have started a terminal directly in `/data01/$USER` <br />	
 
 First time you log in – change the password!<br />
 ```
