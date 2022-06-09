@@ -45,12 +45,22 @@ In SSH FS, right click on the configured connection (upper left corner) and sele
 ![add as workspace folder](images/ssh_add_workspace.png)
 
 At prompt, put in password<br />	
-In the explorer, right click on the Workspace folder and click on **“open remote SSH terminal”**. It will not require a password prompt, since you already typed it in when you logged in to workspace folder. It should have started a terminal directly in `/data01/$USER` <br />	
+In the explorer, right click on the Workspace folder and click on **“open remote SSH terminal”**. 
+
+![open terminal](images/ssh_open_terminal.png)
+
+It will not require a password prompt, since you already typed it in when you logged in to workspace folder. It should have started a terminal directly in `/data01/$USER` <br />	
+
+![terminal](images/terminal.png)
 
 ### Log in via terminal
+If you use another program with a terminal (you'll still need bash), you can simply log in with the following command: 
 ```
 $ ssh -X granehaell@10.11.200.20       #exchange granehaell with your username:
 ```
+
+![terminal login](terminal_login.png )
+
 
 First time you log in – change the password!<br />
 ```
