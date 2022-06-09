@@ -59,7 +59,7 @@ If you use another program with a terminal (you'll still need bash), you can sim
 $ ssh -X granehaell@10.11.200.20       #exchange granehaell with your username:
 ```
 
-![terminal login](terminal_login.png )
+![terminal login](images/terminal_login.png)
 
 
 First time you log in – change the password!<br />
