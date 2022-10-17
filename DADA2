@@ -1,0 +1,16 @@
+#how to run dada2 in the workstation
+
+#activate the conda environment which contains DADA2
+
+conda activate 16S
+
+#you'll see that the environment name has changed from 
+#(16S) granehaell@ws005728:/data01/granehaell$
+#(base) granehaell@ws005728:/data01/granehaell$
+
+#activate R environment
+R
+
+#within R, use it as normal, eg. 
+library(dada2)
+
