@@ -28,7 +28,7 @@ Click save
 
 On the next page, fill in these fields:<br />
 “Host”: type in the IP address of the workstation: **10.11.200.20** <br />
-“root” this is which directory you want to connect to. Write `/data01/$your_username` (eg. /data01/granehaell) <br />
+“root” this is which directory you want to connect to. Write `/data01/your_username` (eg. /data01/granehaell) <br />
 “username”. your username <br />
 “password” – choose prompt. You will have to type it in every time you want to log in. It is not recommended to put the password in this configuration, as it is not very safe. <br />
 Click save
