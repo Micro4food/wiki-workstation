@@ -16,9 +16,8 @@ you need the program to be able to read shell bash files, which is the programmi
 Here is a tutorial to select bash as your default language: <br />
 **https://git-scm.com/downloads**<br />
 
-###  Log in<br />
 
-# Log in via terminal
+### Log in via terminal
 In Vscode, or if you use another program with a terminal (you'll still need bash), you can simply log in by opening a new terminal window.<br />
 make sure you are using bash in the terminal window, it can be changed here:<br />
 
@@ -35,7 +34,8 @@ $ passwd
 ```
 ![change password](https://cdn.mos.cms.futurecdn.net/LU7wmpZXnggLT85ZLYK5Gh-970-80.png)
 
-### OPTINAL - Add the workspace folder to the sidebar, so you can easily check your files and f
+### OPTINAL - Add the workspace folder to the sidebar
+This is to easily check your files and folders
 ### Install the extension ssh FS 
 https://marketplace.visualstudio.com/items?itemName=Kelvin.vscode-sshfs <br />
 This extension  makes it possible to acces the workstation in a folder format similar to a windows setup. It connects to the workstation via a ssh connection.
