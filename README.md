@@ -10,12 +10,32 @@ There are many different programs for this, but I use **Visual Studio Code**. Wi
  
 ### Download VScode
 https://code.visualstudio.com/
+
 ### Install git bash 
 you need the program to be able to read shell bash files, which is the programming language for linux. <br />
 Here is a tutorial to select bash as your default language: <br />
 **https://git-scm.com/downloads**<br />
 
+###  Log in<br />
 
+# Log in via terminal
+In Vscode, or if you use another program with a terminal (you'll still need bash), you can simply log in by opening a new terminal window.<br />
+make sure you are using bash in the terminal window, it can be changed here:<br />
+
+![bash terminal](images/bash_terminal.png)
+
+To log in use following command: 
+```
+$ ssh -X granehaell@10.11.200.20       #exchange granehaell with your username:
+```
+
+First time you log in – change the password!<br />
+```
+$ passwd
+```
+![change password](https://cdn.mos.cms.futurecdn.net/LU7wmpZXnggLT85ZLYK5Gh-970-80.png)
+
+### OPTINAL - Add the workspace folder to the sidebar, so you can easily check your files and f
 ### Install the extension ssh FS 
 https://marketplace.visualstudio.com/items?itemName=Kelvin.vscode-sshfs <br />
 This extension  makes it possible to acces the workstation in a folder format similar to a windows setup. It connects to the workstation via a ssh connection.
@@ -35,7 +55,7 @@ Click save
 
 ![ssh FS](https://github.com/SchoofsKelvin/vscode-sshfs/raw/HEAD/media/config-editor.png)
 
-4.	Log in<br />
+
 
 If you are not working connected to Scientific Network SouthTyrol, you need to first access it first through the University VPN<br />
 
@@ -53,20 +73,6 @@ It will not require a password prompt, since you already typed it in when you lo
 
 ![terminal](images/terminal.png)
 
-### Log in via terminal
-If you use another program with a terminal (you'll still need bash), you can simply log in with the following command: 
-```
-$ ssh -X granehaell@10.11.200.20       #exchange granehaell with your username:
-```
-
-![terminal login](images/terminal_login.png)
-
-
-First time you log in – change the password!<br />
-```
-$ passwd
-```
-![change password](https://cdn.mos.cms.futurecdn.net/LU7wmpZXnggLT85ZLYK5Gh-970-80.png)
 
 ## File transfer
 You can transfer files to/from the workstation through VScode, but a quicker and more controlled way is through a file sharing program like **Filezilla** or **WinSCP**. Access the workstation with the same configurations as for VScode. 
