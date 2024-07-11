@@ -170,6 +170,7 @@ silva databases and an example script of the dada2 pipeline are in this folder:
 ```
 /data01/databases/silva/
 ```
+Remember to use  multithread=TRUE in your scripts, it will make it run much faster. 
 
 # Use of computing resources
 CPU/threads and RAM memory <br />
