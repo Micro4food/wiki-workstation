@@ -25,12 +25,12 @@ make sure you are using bash in the terminal window, it can be changed here:<br 
 
 To log in use following command: 
 ```
-$ ssh -X granehaell@10.11.200.20       #exchange granehaell with your username:
+ssh -X granehaell@10.11.200.20       #exchange granehaell with your username:
 ```
 
 First time you log in – change the password!<br />
 ```
-$ passwd
+passwd
 ```
 ![change password](https://cdn.mos.cms.futurecdn.net/LU7wmpZXnggLT85ZLYK5Gh-970-80.png)
 
@@ -83,17 +83,17 @@ https://ubuntu.com/tutorials/command-line-for-beginners#1-overview<br />
 
 For example, you need to know how to move in the terminal 
 ```
-$ mv
-$ cd 
+mv
+cd 
 ```
 
 How to list read, copy, delete files, make directories etc
 ```
-$ ls
-$ nano
-$ cp
-$ rm
-$ mkdir
+ls
+nano
+cp
+rm
+mkdir
 ```
 
 
@@ -114,12 +114,12 @@ this has limited storage and is only used for configuration files. <br />
 ### A note on storage:
 In order to save space, use symbolic (soft) links to eg. raw data. <br />
 ```
-$ ln -s /path/to/file.fasq.gz /path/to/where/you/want/to/put/it
+ln -s /path/to/file.fasq.gz /path/to/where/you/want/to/put/it
 ```
 Always compress big files to save space! <br />
 Compress fastq files to fastq.gz (most software can work with this, otherwise use zcat to pipe the compressed file through a command without decompressing it first:
  ```
- $ zcat file.gz | software -options >out.example). 
+ zcat file.gz | software -options >out.example). 
  ```
  It's the same with bam files, which are binary version of sam files (alignment files). Also, sorted bam files take up much less space while compressed, so use `samtools sort` to sort them
 
@@ -134,28 +134,41 @@ If you want a new software downloaded, please send Lena an email.
 
 Software is run through the environment manager program called **Anaconda3**. You therefore have to “activate” an environment where the software is excecutable before you can use it: 
 ```
-$ conda activate bowtie2                        # activate the environment with the software
-$ bowtie2 sample.fastq reference.fa             # run your script
-$ conda deactivate bowtie2                      # deactivate the environment 
+conda activate bowtie2                        # activate the environment with the software
+bowtie2 sample.fastq reference.fa             # run your script
+conda deactivate bowtie2                      # deactivate the environment 
 ```
 To find a list of environments/software installed on the workstation:
 ```
-$ conda info --envs
+conda info --envs
 ```
 
 When using conda in a .sh script, you need to add `eval "$(conda shell.bash hook)"` before activating any conda environment
 
 ```
-$ #!/bin/bash
+#!/bin/bash
 
-$ eval "$(conda shell.bash hook)"
-$ conda activate bowtie2
-$ bowtie2 -options file
-$ conda deactivate
-$
-$ conda activate fastqc
-$ fastqc -options file
-$ conda deactivate
+eval "$(conda shell.bash hook)"
+conda activate bowtie2
+bowtie2 -options file
+conda deactivate
+
+conda activate fastqc
+fastqc -options file
+conda deactivate
+```
+
+# Running 16S analysis with dada2
+use the conda environment "16S" to run R with dada2 <br />
+You will have to run it in the terminal, there is no R Studio
+```
+conda activate 16S                        # activate the environment with the software
+R                                    # open R
+library("dada2")                     # run your R code
+```
+silva databases and an example script of the dada2 pipeline are in this folder: 
+```
+/data01/databases/silva/
 ```
 
 # Use of computing resources
