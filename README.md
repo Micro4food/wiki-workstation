@@ -13,9 +13,10 @@ https://code.visualstudio.com/
 
 ### Install git bash 
 you need the program to be able to read shell bash files, which is the programming language for linux. <br />
-Here is a tutorial to select bash as your default language: <br />
 **https://git-scm.com/downloads**<br />
+Here is a tutorial to select bash as your default language: <br />
 
+**https://stackoverflow.com/questions/44435697/change-the-default-terminal-in-visual-studio-code**<br />
 
 ### Log in via terminal
 In Vscode, or if you use another program with a terminal (you'll still need bash), you can simply log in by opening a new terminal window.<br />
